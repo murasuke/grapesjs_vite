@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>grapesjs vite sample</title>
+  <style>
+    /* 全画面表示 */
+    body,
+    html {
+      margin: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="./styles/editor.css" />
+</head>
+<body>
+  <div class="container">
+    <header id="header">
+      Header Panel
+    </header>
+    <main class="row">
+      <!-- 左パネル -->
+      <div id="layers" className="column" style="flex-basis: 500px">
+        <div id="blocks-container"></div>
+        Layers
+        <div id="layers-container"></div>
+      </div>
+      <div class="column editor-clm">
+        <!-- エディタ領域 -->
+        <div id="gjs" style="overflow: hidden"></div>
+      </div>
+      <div id="style-manager" class="column" style="flex-basis: 500px">
+        <!-- 右パネル -->
+        スタイルマネージャー
+        <br />
+        <!-- 下のパネルは縦並びで表示 -->
+        <div id="selectors-container"></div>
+        <div id="traits-container"></div>
+        <div id="style-manager-container"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      Footer Panel
+      <div class="panel__basic-actions" style="flex-grow: 1;"></div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
