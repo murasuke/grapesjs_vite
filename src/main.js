@@ -1,13 +1,13 @@
 import 'grapesjs/dist/css/grapes.min.css';
 import grapesjs from 'grapesjs';
 import blocks_basic from 'grapesjs-blocks-basic';
-//import ckeditor from 'grapesjs-plugin-ckeditor';
+import ckeditor from 'grapesjs-plugin-ckeditor';
 
 const editor = grapesjs.init({
   container: '#gjs',
   height: '100%',
   fromElement: true,
-  plugins: [blocks_basic /*, ckeditor*/],
+  plugins: [blocks_basic , ckeditor],
   // pluginsOpts: {
   //   'grapesjs-plugin-ckeditor': {/* ...options */}
   // },
@@ -233,7 +233,7 @@ const newPanel = panelManager.addPanel({
       id: 'clear-button',
       active: true, // active by default
       className: 'btn-clear-editor',
-      label: `Clear`,
+      label: `クリア`,
       command: 'core:canvas-clear', // Built-in command
     },
   ],
